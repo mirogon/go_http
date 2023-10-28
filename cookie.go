@@ -11,11 +11,12 @@ type Cookie struct {
 	Value          string
 	HttpOnly       bool
 	SecureOnly     bool
+	SameSite       string
 	ExpirationDate *time.Time
 }
 
-func CreateCookie(name string, value string, httpOnly bool, secureOnly bool, expirationDate *time.Time) Cookie {
-	return Cookie{Name: name, Value: value, HttpOnly: httpOnly, SecureOnly: secureOnly, ExpirationDate: expirationDate}
+func CreateCookie(name string, value string, httpOnly bool, secureOnly bool, sameSite string, expirationDate *time.Time) Cookie {
+	return Cookie{Name: name, Value: value, HttpOnly: httpOnly, SecureOnly: secureOnly, SameSite: sameSite, ExpirationDate: expirationDate}
 }
 
 func (cookie Cookie) GetValueString() string {
@@ -28,11 +29,14 @@ func (cookie Cookie) GetValueString() string {
 	if cookie.HttpOnly {
 		str += "HttpOnly; "
 	}
+
 	if cookie.SecureOnly {
 		str += "Secure; "
 	}
 
-	str += "SameSite=None; "
+	if cookie.SameSite != "" {
+		str += "SameSite=" + cookie.SameSite + "; "
+	}
 
 	for str[len(str)-1] == ';' || str[len(str)-1] == ' ' {
 		str = str[:len(str)-1]
