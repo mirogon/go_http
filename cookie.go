@@ -32,6 +32,8 @@ func (cookie Cookie) GetValueString() string {
 		str += "Secure; "
 	}
 
+	str += "SameSite=None; "
+
 	for str[len(str)-1] == ';' || str[len(str)-1] == ' ' {
 		str = str[:len(str)-1]
 	}
