@@ -47,7 +47,7 @@ func TestHandleOptionsRequest(t *testing.T) {
 	responseWriterMock.EXPECT().DeleteHeader("Content-Length")
 	responseWriterMock.EXPECT().Send()
 
-	http_.HandleOptionsRequest(responseWriterMock)
+	http_.HandlePreflightOptionsRequest(responseWriterMock, "")
 }
 
 func TestParseRequestIntoRequestType(t *testing.T) {
