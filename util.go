@@ -27,6 +27,8 @@ func HandlePreflightOptionsRequest(httpResponseWriter HttpResponseWriter, safeOr
 func OriginToSafeOrigin(origin string) string {
 	if origin == "https://polterai.com" {
 		return "https://polterai.com"
+	} else if origin == "http://localhost:3000" {
+		return "http://localhost:3000"
 	}
 	return "http://localhost:5173"
 }
