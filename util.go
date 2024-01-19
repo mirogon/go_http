@@ -28,8 +28,8 @@ func HandlePreflightOptionsRequest(httpResponseWriter HttpResponseWriter, safeOr
 }
 
 func OriginToSafeOrigin(origin string) string {
-	if strings.Contains(origin, "https://polterai.com") {
-		return "https://polterai.com"
+	if strings.Contains(origin, "https://www.polterai.com") {
+		return "https://www.polterai.com"
 	} else if strings.Contains(origin, "http://localhost:3000") {
 		return "http://localhost:3000"
 	}
