@@ -1,5 +1,7 @@
 github.com/golang/mock v1.6.0 h1:ErTB+efbowRARo13NNdxyJji2egdxLGQhRaY+DUumQc=
 github.com/golang/mock v1.6.0/go.mod h1:p6yTPP+5HYm5mzsMV8JkE6ZKdX+/wYM6Hr+LicevLPs=
+github.com/mirogon/go_util v0.0.0-20240404133818-f26b17006d9f h1:+Ph78L3UEXK9oRz3rw5WLmA4ncbGjAfs/EdTDxZanwQ=
+github.com/mirogon/go_util v0.0.0-20240404133818-f26b17006d9f/go.mod h1:G+YBwD+SqP1yjLo1S5utRhkTxbI67FjB/X9U3ddo1Xw=
 github.com/mirogon/go_util v0.1.0 h1:H3epAmeTY8XNyBr55OQFKOwIDfMmp1b9pzPif0QQfsA=
 github.com/mirogon/go_util v0.1.0/go.mod h1:G+YBwD+SqP1yjLo1S5utRhkTxbI67FjB/X9U3ddo1Xw=
 github.com/mirogon/go_util v0.2.0 h1:dr2L4A/JwfCSVsqT1/7a9ggB8LyTinBNwTrTCBULArI=

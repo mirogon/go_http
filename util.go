@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+// Test
 func HandleCORS(request *http.Request, responseWriter HttpResponseWriter, origin string) bool {
 	safeOrigin := OriginToSafeOrigin(origin)
 	if request.Method == "OPTIONS" {
